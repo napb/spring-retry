@@ -5,14 +5,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class Servicio {
 
-    public String metodo(String evaluacion){
+    public String metodo(String evaluacion, int conteo){
 
-        if (evaluacion.equals("error")) {
+        if (conteo < 3) {
 
             System.out.println("----------------- error -----------------");
             throw new RuntimeException("Exeption");
         } else {
-            return "Paso Ok";
+            return "evaluacion: " + evaluacion;
         }
     }
 

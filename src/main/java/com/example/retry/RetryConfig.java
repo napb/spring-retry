@@ -34,7 +34,7 @@ public class RetryConfig {
         retryPolicy.setMaxAttempts(retrySetMaxAttempts);
         retryTemplate.setRetryPolicy(retryPolicy);
 
-        retryTemplate.registerListener(new DefaultRetryListener());
+        //retryTemplate.registerListener(new DefaultRetryListener());
 
         return retryTemplate;
     }

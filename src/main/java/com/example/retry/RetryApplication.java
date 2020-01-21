@@ -21,8 +21,7 @@ public class RetryApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		String execute = retryTemplate.execute(context -> servicio.metodo("error"));
-		//String execute = retryTemplate.execute(context -> servicio.metodo("dsadksjdklsjkdsa"));
+		String execute = retryTemplate.execute(context -> servicio.metodo("ok :)", context.getRetryCount()));
 
 		System.out.println("execute: " + execute);
 	}
